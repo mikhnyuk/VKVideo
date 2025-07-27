@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Editor.js VK Video Tool Demo</title>
+        <link rel="stylesheet" href="./src/index.css">
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                margin: 0;
+                padding: 20px;
+            }
+
+            h1 {
+                color: #333;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            #editorjs {
+                max-width: 800px;
+                margin: 0 auto;
+                background-color: #fff;
+                padding: 30px;
+                border-radius: 8px;
+            }
+
+            .cdx-marker {
+                background: rgb(59 130 246 / 25%);
+                padding: 2px 2px;
+            }
+        </style>
+  </head>
+  <body class="bg-white mt-20">
+    <img src="./assets/header.png" alt="VK Video Tool Demo" style="display: block; margin: 0 auto 20px; max-width: 100%;">
+    <div id="editorjs" class="border border-gray-200"></div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="./src/index.js"></script>
+
+    <script>
+        const editor = new EditorJS({
+            holder: 'editorjs',
+            autofocus: true,
+            tools: {
+                vkVideo: {
+                    class: VKVideoTool,
+                    inlineToolbar: true,
+                },
+            },
+
+        });
+    </script>
+</body>
+</html>
